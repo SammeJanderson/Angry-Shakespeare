@@ -11,6 +11,9 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile group: 'org.telegram', name: 'telegrambots', version: '5.0.1'
+    implementation 'com.github.pengrad:java-telegram-bot-api:5.0.1'
+
 
 }
+
+compileJava.options.encoding = "UTF-8"
