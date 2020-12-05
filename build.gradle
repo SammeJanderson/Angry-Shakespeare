@@ -5,7 +5,7 @@ plugins {
 jar {
     manifest {
         attributes(
-                'AngryShakespeare': 'AngryShakespeare.java'
+                'AngryShakespeare': 'build/classes/java/main/AngryShakespeare.class'
         )
     }
 }
