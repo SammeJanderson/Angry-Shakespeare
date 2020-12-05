@@ -2,6 +2,14 @@ plugins {
     id 'java'
 }
 
+jar {
+    manifest {
+        attributes(
+                'AngryShakespeare': 'AngryShakespeare.java'
+        )
+    }
+}
+
 group 'io.github.sammejanderson'
 version '1.0-SNAPSHOT'
 
@@ -15,5 +23,9 @@ dependencies {
 
 
 }
+
+
+
+
 
 compileJava.options.encoding = "UTF-8"
