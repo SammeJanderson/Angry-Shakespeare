@@ -25,7 +25,6 @@ public class InsultFactory {
 
             "“%s! Fanfarrão vil e maldito furioso!",
 
-
             "“%s! \n Dentes tivesses tu na tua cabeça quando nasceste,\n Para significar teres vindo a morder o mundo.”",
 
             "“%s!\n Você blocos, você pedras, você pior do que coisas sem sentido!”",
