@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class AngryShakespeare {
     public static void main(String[] args) {
-        TelegramBot angryShakespeare = new TelegramBot("");
+        TelegramBot angryShakespeare = new TelegramBot("TOKEN_DO_SEU_BOT");
 
         angryShakespeare.setUpdatesListener(updates -> {
             for (Update update : updates) {
