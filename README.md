@@ -16,7 +16,7 @@ Rode o programa e pronto.
 
 ## Como usar
 Esse bot funciona no modo inline query. Isso permite que ele seja chamado em qualquer conversa. 
-Depois de implementado basta escrever uma mensagem no telegram seguindo o formato @NOME_DO_BOT <query>;
+Depois de implementado basta escrever uma mensagem no telegram seguindo o formato @NOME_DO_BOT \<query>;
 
 Se quiser aprender como implementar bots do telegram você pode clicar [aqui][medium]  e ver o tutorial que eu escrevi sobre o assunto.
   
