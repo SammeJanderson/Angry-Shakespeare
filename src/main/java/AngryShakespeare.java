@@ -7,14 +7,13 @@ import com.pengrad.telegrambot.model.Update;
 import com.pengrad.telegrambot.model.request.InlineQueryResult;
 import com.pengrad.telegrambot.model.request.InlineQueryResultArticle;
 import com.pengrad.telegrambot.request.AnswerInlineQuery;
-import com.pengrad.telegrambot.request.SendMessage;
 import com.pengrad.telegrambot.response.BaseResponse;
 
 import java.util.Random;
 
 public class AngryShakespeare {
     public static void main(String[] args) {
-        TelegramBot angryShakespeare = new TelegramBot("1436883352:AAHHXW6byZTbgVWIoAM7KJCt16v-NQQu1CU");
+        TelegramBot angryShakespeare = new TelegramBot("");
 
 
         angryShakespeare.setUpdatesListener(updates -> {
@@ -27,23 +26,23 @@ public class AngryShakespeare {
                 CallbackQuery callbackQuery = update.callbackQuery();
 
 
-
-                if (inlineQuery != null&&update.message()==null) {
+                if (inlineQuery != null && update.message() == null) {
                     String insultado = inlineQuery.query();
                     System.out.println(insultado);
 
 
-                    boolean insultoProibido = inlineQuery.query().matches("(samme)|(..mm.)|(summer)");
+                    /*Essa parte do codigo pode ser usada para mandar respostas diferentes dependendo do query
+                     * nesse caso usei para detectar quando meu nome tinha sido chamado na query e insultar a pessoa que tentou me insultar.*/
+                    boolean insultoProibido = inlineQuery.query().matches("");
                     System.out.println(insultoProibido);
 
 
                     if (insultoProibido) {
 
-                        InlineQueryResult inlineQuerySamme = new InlineQueryResultArticle("id5", "Samme quando nasceu teu ...",
-                                inlineQuery.from().firstName() +" tentou insultar o Samme.\n"+inlineQuery.from().firstName()+" é um(a) covarde infiel! Um(a) patife desonesto!\nFanfarrão(ona) vil e maldito(a) furioso(a)!"
-                                ).thumbUrl("https://i.imgur.com/5sTio5x.jpg");
+                        InlineQueryResult inlineQueryForbidenInsult = new InlineQueryResultArticle("id5", "titulo", ""
+                        ).thumbUrl("https://i.imgur.com/5sTio5x.jpg");
 
-                        BaseResponse response = angryShakespeare.execute(new AnswerInlineQuery(inlineQuery.id(), inlineQuerySamme).cacheTime(0));
+                        BaseResponse response = angryShakespeare.execute(new AnswerInlineQuery(inlineQuery.id(), inlineQueryForbidenInsult).cacheTime(0));
 
                     } else {
 
